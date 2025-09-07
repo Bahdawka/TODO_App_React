@@ -118,6 +118,60 @@ src/
 - **Event Handling**: Proper form submission and click event management
 - **CSS Organization**: Modular styling with consistent naming conventions
 
+## 📅 UPDATE - 07.09.2025
+
+### 🎉 New Features Added
+
+#### React Toastify Integration
+- **Toast Notifications**: Added user-friendly notifications for all major actions
+- **Contextual Messages**: Different toast types for different actions:
+  - ✅ Success toasts when completing TODOs
+  - ⚠️ Warning toasts when deleting all TODOs
+  - ℹ️ Info toasts when clearing completed TODOs
+- **Enhanced UX**: Immediate visual feedback for user actions
+- **Customizable**: Positioned notifications with auto-close functionality
+
+#### IdleTimer Component
+- **Activity Tracking**: Monitors user activity and interaction patterns
+- **Performance Insights**: Tracks user engagement with the application
+- **Event Detection**: Captures and counts various user interaction events
+- **Time Tracking**: Shows elapsed time since last user activity
+- **Real-time Updates**: Updates activity metrics every 500ms for accurate tracking
+
+### 🏗️ Updated Project Structure
+
+```
+src/
+├── components/
+│   ├── Actions.tsx     # Enhanced with toast notifications
+│   ├── Button.tsx      
+│   ├── Form.tsx        
+│   ├── IdleTimer.tsx   # 🆕 NEW: User activity monitoring
+│   ├── Provider.tsx    
+│   ├── Todo.tsx        # Enhanced with toast notifications
+│   └── Todos.tsx       
+├── App.tsx             # Updated with ToastContainer and IdleTimer
+└── ...existing files...
+```
+
+### 📦 New Dependencies
+- **react-toastify**: Modern toast notification library
+- **react-idle-timer**: User activity and idle time tracking
+
+### 🚀 Benefits of New Features
+
+#### Toast Notifications Benefits:
+- **Better User Experience**: Users get immediate feedback for their actions
+- **Visual Confirmation**: Clear indication when actions are completed successfully
+- **Error Prevention**: Helps users understand what happened with their interactions
+- **Professional Feel**: Makes the app feel more polished and responsive
+
+#### IdleTimer Benefits:
+- **User Analytics**: Understand how users interact with the application
+- **Performance Monitoring**: Track user engagement and session duration
+- **Development Insights**: Helps developers understand user behavior patterns
+- **Future Enhancements**: Data can be used for features like auto-save or session management
+
 ---
 
 # TODO Додаток
@@ -238,3 +292,57 @@ src/
 - **Шаблон Контексту**: Глобальне управління станом без передачі пропсів через багато рівнів
 - **Обробка Подій**: Правильна обробка відправки форм та подій кліку
 - **Організація CSS**: Модульна стилізація з послідовним іменуванням
+
+## 📅 ОНОВЛЕННЯ - 07.09.2025
+
+### 🎉 Додані Нові Функції
+
+#### Інтеграція React Toastify
+- **Toast Сповіщення**: Додано зручні сповіщення для всіх основних дій
+- **Контекстні Повідомлення**: Різні типи toast для різних дій:
+  - ✅ Успішні toast при завершенні TODO
+  - ⚠️ Попереджувальні toast при видаленні всіх TODO
+  - ℹ️ Інформаційні toast при очищенні виконаних TODO
+- **Покращений UX**: Миттєвий візуальний зворотний зв'язок для дій користувача
+- **Налаштовувані**: Позиціоновані сповіщення з функцією автоматичного закриття
+
+#### Компонент IdleTimer
+- **Відстеження Активності**: Моніторить активність користувача та шаблони взаємодії
+- **Аналітика Продуктивності**: Відстежує залученість користувача в додаток
+- **Виявлення Подій**: Захоплює та підраховує різні події взаємодії користувача
+- **Відстеження Часу**: Показує час, що минув з останньої активності користувача
+- **Оновлення в Реальному Часі**: Оновлює метрики активності кожні 500мс для точного відстеження
+
+### 🏗️ Оновлена Структура Проекту
+
+```
+src/
+├── components/
+│   ├── Actions.tsx     # Покращено toast сповіщеннями
+│   ├── Button.tsx      
+│   ├── Form.tsx        
+│   ├── IdleTimer.tsx   # 🆕 НОВИЙ: Моніторинг активності користувача
+│   ├── Provider.tsx    
+│   ├── Todo.tsx        # Покращено toast сповіщеннями
+│   └── Todos.tsx       
+├── App.tsx             # Оновлено з ToastContainer та IdleTimer
+└── ...існуючі файли...
+```
+
+### 📦 Нові Залежності
+- **react-toastify**: Сучасна бібліотека toast сповіщень
+- **react-idle-timer**: Відстеження активності користувача та часу простою
+
+### 🚀 Переваги Нових Функцій
+
+#### Переваги Toast Сповіщень:
+- **Кращий Досвід Користувача**: Користувачі отримують миттєвий зворотний зв'язок на свої дії
+- **Візуальне Підтвердження**: Чітке позначення успішного виконання дій
+- **Запобігання Помилкам**: Допомагає користувачам зрозуміти, що сталося з їх взаємодіями
+- **Професійний Вигляд**: Робить додаток більш відшліфованим та реактивним
+
+#### Переваги IdleTimer:
+- **Аналітика Користувачів**: Розуміння того, як користувачі взаємодіють з додатком
+- **Моніторинг Продуктивності**: Відстеження залученості користувачів та тривалості сесій
+- **Інсайти Розробки**: Допомагає розробникам зрозуміти шаблони поведінки користувачів
+- **Майбутні Покращення**: Дані можуть бути використані для функцій як автозбереження або управління сесіями

@@ -2,6 +2,8 @@ import { useContext } from 'react'
 import { RiCheckboxCircleFill, RiCheckboxBlankCircleLine, RiDeleteBin2Line, RiTodoFill } from 'react-icons/ri'
 import { Context } from '../context/Context'
 import type { TodoInterface } from '../types/Todo.interface'
+import { toast } from 'react-toastify'
+
 
 interface TodoProps {
   todo: TodoInterface
@@ -10,13 +12,18 @@ interface TodoProps {
 const Todo = ({ todo: { id, title, completed } }: TodoProps) => {
   const { deleteTodo, toggleTodo } = useContext(Context)
 
+  const handleDeleteTodo = () => {
+    deleteTodo(id)
+    toast.success('TODO Finished! 🥳')
+  }
+
   return (
     <div className={`todo ${completed ? 'todo--completed' : ''}`}>
       <div className="todo__id"></div> {/* possible to add {id} between divs to see user id*/}
       <RiTodoFill className="todo__icon" />
       <h2 className="todo__title">{title}</h2>
       <div className="todo__completed"></div> {/* possible to add {completed.toString()} between divs to see boolean*/}
-      <RiDeleteBin2Line className="todo__delete-btn" onClick={() => deleteTodo(id)} />
+      <RiDeleteBin2Line className="todo__delete-btn" onClick={handleDeleteTodo} />
       {
         completed ?
           (

@@ -181,3 +181,44 @@ form:hover {
   color: #2ecc71;
   scale: 1.5;
 }
+
+.activity-bar {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: scale 0.3s;
+  text-align: center;
+}
+
+.activity-bar:hover {
+  scale: 1.02;
+}
+
+.activity-bar h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-size: 1.8em;
+  color: #3498db;
+  margin-bottom: 15px;
+}
+
+.activity-bar p {
+  font-size: 1.1rem;
+  color: #333333;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+
+.activity-bar p:hover {
+  color: #3498db;
+}
+
+.activity-bar p:last-child {
+  margin-bottom: 0;
+  font-weight: bold;
+  color: #9b59b6;
+}
+
