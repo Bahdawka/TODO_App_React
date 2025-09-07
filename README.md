@@ -2,6 +2,8 @@
 
 A modern, responsive TODO application built with React, TypeScript, and Vite. This project demonstrates clean architecture patterns, context-based state management, and modern React development practices.
 
+Deploy on Vercel: https://todo-app-react-lake-phi.vercel.app/
+
 ## 🎯 Project Goals
 
 - **Learn React with TypeScript**: Implement type-safe React components and hooks
